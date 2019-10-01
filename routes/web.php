@@ -19,4 +19,4 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/siswa','SiswaController@index');
+Route::get('/siswa','StudentController@index');
