@@ -19,6 +19,11 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+<<<<<<< HEAD
+Route::get('/siswa','SiswaController@index');
+Route::get('/siswa/create','SiswaController@create');
+=======
 Route::get('/siswa','StudentController@index');
 Route::get('/siswa/baru', 'StudentController@create');
 Route::post('/siswa', 'StudentController@store');
+>>>>>>> 6b02f463704303730c87ca194959b5eaa87d967e

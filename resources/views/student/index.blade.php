@@ -11,6 +11,31 @@
                     Tambah
                     </button>
 
+<<<<<<< HEAD
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Tambah Data</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                            <form action = "" method="POST"> <!--- Form -->
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Nama</label>
+                                    <input name = "nama" type="text" class="form-control" id="nama" aria-describedby="emailHelp" placeholder="nama">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Kode</label>
+                                    <input name = "kode" type="text" class="form-control" id="Kode" placeholder="kode">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleFormControlTextarea1">Deskripsi</label>
+                                    <textarea name = "deskripsi" class="form-control" id="exampleFormControlTextarea1" ros="3"></textarea>
+=======
                     <!-- Modal -->
                     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
@@ -35,6 +60,7 @@
                                             <strong>{{ $errors->first('nik') }}</strong>
                                         </span>
                                     @endif
+>>>>>>> 6b02f463704303730c87ca194959b5eaa87d967e
                                 </div>
                             </div>
 
