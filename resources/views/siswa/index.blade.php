@@ -10,9 +10,7 @@
             <div class="card">
                 <div class="card-header">
                     <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-primary btn-sm float-right" data-toggle="modal" data-target="#exampleModal">
-                    Tambah Data
-                    </button>
+                    <a class="btn btn-primary btn-sm float-right" href="/siswa/create" role="button">Tambah</a>
                 </div>
                 
                 <div class="card-body">
@@ -35,41 +33,6 @@
                         </tr>
                     @endforeach
 
-                    
-
-                <!-- Modal -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                    <form method="POST" action="/siswa/create">
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">NIK</label>
-                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="nik">
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputPassword1">Nama</label>
-                            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="nama">
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputPassword1">Keterangan</label>
-                            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="keterangan">
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Keluar</button>
-                        <button type="submit" class="btn btn-primary">Simpan</button>
-                    </form>
-                    </div>
-                    </div>
-                </div>
-                </div>
                     </tbody>
                     </thead>
                 </div>
