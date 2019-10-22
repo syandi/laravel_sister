@@ -20,5 +20,5 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/siswa','SiswaController@index');
-Route::get('/siswa/create','SiswaController@create');
+Route::get('/siswa/create', 'SiswaController@create');
 Route::post('/siswa', 'SiswaController@store');
