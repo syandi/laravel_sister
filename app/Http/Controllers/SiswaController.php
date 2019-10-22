@@ -14,6 +14,7 @@ class SiswaController extends Controller
     public function create(){
         return view('siswa.create');
     }
+<<<<<<< HEAD
 
     public function store(Request $request) {
         $siswa = new Siswa();
@@ -25,4 +26,6 @@ class SiswaController extends Controller
 
         return redirect('/siswa');
     }
+=======
+>>>>>>> af07be3660088951f11f348d1e255486d8fe2e0f
 }

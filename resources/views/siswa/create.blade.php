@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 @extends ('layouts.app')
+=======
+@extends('layouts.app')
+>>>>>>> af07be3660088951f11f348d1e255486d8fe2e0f
 
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
+<<<<<<< HEAD
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">
@@ -72,3 +77,26 @@
     </div>
 </div>
 @endsection
+=======
+        <div class="col-sm-6">
+            <form>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input class="form-control" type="text" placeholder="">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input class="form-control" type="text" placeholder="">
+                </div>
+                <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+@endsection
+>>>>>>> af07be3660088951f11f348d1e255486d8fe2e0f

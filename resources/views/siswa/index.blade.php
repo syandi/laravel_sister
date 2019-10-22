@@ -10,7 +10,11 @@
             <div class="card">
                 <div class="card-header">
                     <!-- Button trigger modal -->
+<<<<<<< HEAD
                     <a type="button" class="btn btn-primary btn-sm float-right" href="/siswa/create" role="button">Tambah Data</a>
+=======
+                    <a class="btn btn-primary btn-sm float-right" href="/siswa/create" role="button">Tambah</a>
+>>>>>>> af07be3660088951f11f348d1e255486d8fe2e0f
                 </div>
                 
                 <div class="card-body">
@@ -36,6 +40,7 @@
                             </td>
                         </tr>
                     @endforeach
+<<<<<<< HEAD
                     </tbody>
                     </thead>
                 </div>
@@ -69,6 +74,11 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Keluar</button>
                     <button type="submit" class="btn btn-primary">Simpan</button>
+=======
+
+                    </tbody>
+                    </thead>
+>>>>>>> af07be3660088951f11f348d1e255486d8fe2e0f
                 </div>
             </div>
         </div>
