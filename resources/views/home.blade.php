@@ -8,13 +8,9 @@
                 <div class="card-header">Welcome</div>
 
                 <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    Ini adalah halaman utama!
+                    <div class="container">
+                        <img src="..." alt="..." class="img-thumbnail">
+                    </div>
                 </div>
             </div>
         </div>

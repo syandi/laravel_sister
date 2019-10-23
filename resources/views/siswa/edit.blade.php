@@ -6,17 +6,17 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">
-                    Data Siswa Baru
+                    Edit Mesin
                 </div>
                 <div class="card-body">
-                    <form method="POST" action="/siswa">
+                <form method="POST" action="/siswa/{{$id}}">
                         @csrf
 
                         <div class="form-group row">
                             <label for="nik" class="col-sm-4 col-form-label text-md-right">NIK</label>
 
                             <div class="col-md-6">
-                                <input id="nik" class="form-control{{ $errors->has('nik') ? ' is-invalid' : '' }}" name="nik" value="{{ old('nik') }}" required autofocus>
+                                <input id="nik" class="form-control{{ $errors->has('nik') ? ' is-invalid' : '' }}" name="nik" value="{{ $siswa->nik }}" required autofocus>
 
                                 @if ($errors->has('nik'))
                                     <span class="invalid-feedback" role="alert">
@@ -30,7 +30,7 @@
                             <label for="nama" class="col-sm-4 col-form-label text-md-right">Nama</label>
 
                             <div class="col-md-6">
-                                <input id="nama" class="form-control{{ $errors->has('nama') ? ' is-invalid' : '' }}" name="nama" value="{{ old('nama') }}" required autofocus>
+                                <input id="nama" class="form-control{{ $errors->has('nama') ? ' is-invalid' : '' }}" name="nama" value="{{ $siswa->nama }}" required autofocus>
 
                                 @if ($errors->has('nama'))
                                     <span class="invalid-feedback" role="alert">
@@ -44,7 +44,7 @@
                             <label for="keterangan" class="col-sm-4 col-form-label text-md-right">Keterangan</label>
 
                             <div class="col-md-6">
-                                <input id="keterangan" class="form-control{{ $errors->has('keterangan') ? ' is-invalid' : '' }}" name="keterangan" value="{{ old('keterangan') }}" required autofocus>
+                                <input id="keterangan" class="form-control{{ $errors->has('nama') ? ' is-invalid' : '' }}" name="keterangan" value="{{ $siswa->keterangan }}" required autofocus>
 
                                 @if ($errors->has('keterangan'))
                                     <span class="invalid-feedback" role="alert">
@@ -52,7 +52,7 @@
                                     </span>
                                 @endif
                             </div>
-                        </div>                        
+                        </div>  
 
                         <div class="form-group row mb-0">
                             <div class="col-md-8 offset-md-4">
@@ -71,4 +71,4 @@
         </div>
     </div>
 </div>
-@endsection
+@endsection()

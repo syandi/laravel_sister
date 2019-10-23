@@ -13,11 +13,11 @@ class Siswas extends Migration
      */
     public function up()
     {
-        Schema::create('siswas', function (Blueprint $table) {
+        Schema::create('siswa', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nik');
             $table->string('nama');
-            $table->String('keterangan');
+            $table->String('keterangan')->nullable();
             $table->timestamps();
         });
     }
