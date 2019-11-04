@@ -17,6 +17,7 @@ class Siswas extends Migration
             $table->increments('id');
             $table->string('nik');
             $table->string('nama');
+            $table->string('kelas');
             $table->String('keterangan')->nullable();
             $table->timestamps();
         });
