@@ -14,7 +14,7 @@ class KelasController extends Controller
      */
     public function index()
     {
-        //
+        return view('kelas.index', ['kelas'=>Kelas::all()]);
     }
 
     /**
@@ -24,7 +24,7 @@ class KelasController extends Controller
      */
     public function create()
     {
-        //
+        return view('kelas.create');
     }
 
     /**
@@ -35,7 +35,14 @@ class KelasController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $kelas = new Kelas();
+        $kelas->id = $request->nikid;
+        $kelas->nama = $request->nama;
+        $kelas->tahun_ajaran = $request->tahun_ajaran;
+        
+        $siswa->save();
+
+        return redirect('/kelas');
     }
 
     /**
@@ -46,7 +53,7 @@ class KelasController extends Controller
      */
     public function show(kelas $kelas)
     {
-        //
+        
     }
 
     /**
@@ -57,7 +64,8 @@ class KelasController extends Controller
      */
     public function edit(kelas $kelas)
     {
-        //
+        $kelas = Kelas::find($id);
+        return view('kelas.edit', ['kelas' => $kelas, 'id' => $id]);
     }
 
     /**
@@ -69,7 +77,13 @@ class KelasController extends Controller
      */
     public function update(Request $request, kelas $kelas)
     {
-        //
+        $kelas = Siswa::find($id);
+        $kelas->nama = $request->nama;
+        $kelas->tahun_ajaran = $request->tahun_ajaran;
+        
+        $kelas->save();
+
+        return redirect('/kelas');
     }
 
     /**
@@ -80,6 +94,9 @@ class KelasController extends Controller
      */
     public function destroy(kelas $kelas)
     {
-        //
+        $kelas = Kelas::find($id);
+        $kelas->delete();
+
+        return redirect('/kelas')
     }
 }

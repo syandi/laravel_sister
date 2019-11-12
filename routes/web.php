@@ -25,3 +25,10 @@ Route::post('/siswa', 'SiswaController@store');
 Route::get('/siswa/{id}/edit', 'SiswaController@edit');
 Route::post('/siswa/{id}', 'SiswaController@Update');
 Route::get('/siswa/{id}/remove', 'SiswaController@destroy');
+
+Route::get('/kelas','KelasController@index');
+Route::get('/kelas/create', 'KelasController@create');
+Route::post('/kelas', 'KelasController@store');
+Route::get('/kelas/{id}/edit', 'KelasController@edit');
+Route::post('/kelas/{id}', 'KelasController@Update');
+Route::get('/kelas/{id}/remove', 'KelasController@destroy');

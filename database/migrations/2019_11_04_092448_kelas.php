@@ -13,10 +13,10 @@ class Kelas extends Migration
      */
     public function up()
     {
-        Schema::create('flights', function (Blueprint $table) {
+        Schema::create('kelas', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->string('airline');
+            $table->string('nama');
+            $table->date('tahun_ajaran');
             $table->timestamps();
         });
     }

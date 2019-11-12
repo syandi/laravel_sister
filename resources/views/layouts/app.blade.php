@@ -37,6 +37,9 @@
                         <li class="nav-item active">
                             <a class="nav-link" href="/siswa">Data Siswa <span class="sr-only">(current)</span></a>
                         </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/kelas">Kelas <span class="sr-only">(current)</span></a>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">SPP</a>
                         </li>
