@@ -9,46 +9,46 @@
                     Edit Mesin
                 </div>
                 <div class="card-body">
-                <form method="POST" action="/siswa/{{$id}}">
+                <form method="POST" action="/kelas/{{$id}}">
                         @csrf
 
                         <div class="form-group row">
                             <label for="nik" class="col-sm-4 col-form-label text-md-right">NIK</label>
 
                             <div class="col-md-6">
-                                <input id="nik" class="form-control{{ $errors->has('nik') ? ' is-invalid' : '' }}" name="nik" value="{{ $siswa->nik }}" required autofocus>
+                                <input id="nik" class="form-control{{ $errors->has('nik') ? ' is-invalid' : '' }}" name="nik" value="{{ $kelas->id }}" required autofocus>
 
-                                @if ($errors->has('nik'))
+                                @if ($errors->has('id'))
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('nik') }}</strong>
+                                        <strong>{{ $errors->first('id') }}</strong>
                                     </span>
                                 @endif
                             </div>
                         </div>
                         
                         <div class="form-group row">
-                            <label for="nama" class="col-sm-4 col-form-label text-md-right">Nama</label>
+                            <label for="name" class="col-sm-4 col-form-label text-md-right">Nama</label>
 
                             <div class="col-md-6">
-                                <input id="nama" class="form-control{{ $errors->has('nama') ? ' is-invalid' : '' }}" name="nama" value="{{ $siswa->nama }}" required autofocus>
+                                <input id="name" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ $kelas->name }}" required autofocus>
 
-                                @if ($errors->has('nama'))
+                                @if ($errors->has('name'))
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('nama') }}</strong>
+                                        <strong>{{ $errors->first('name') }}</strong>
                                     </span>
                                 @endif
                             </div>
                         </div>
 
                         <div class="form-group row">
-                            <label for="keterangan" class="col-sm-4 col-form-label text-md-right">Keterangan</label>
+                            <label for="tahun_ajaran" class="col-sm-4 col-form-label text-md-right">Tahun Ajaran</label>
 
                             <div class="col-md-6">
-                                <input id="keterangan" class="form-control{{ $errors->has('nama') ? ' is-invalid' : '' }}" name="keterangan" value="{{ $siswa->keterangan }}" required autofocus>
+                                <input id="tahun_ajaran" class="form-control{{ $errors->has('nama') ? ' is-invalid' : '' }}" name="tahun_ajaran" value="{{ $kelas->tahun_ajaran }}" required autofocus>
 
-                                @if ($errors->has('keterangan'))
+                                @if ($errors->has('tahun_ajaran'))
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('keterangan') }}</strong>
+                                        <strong>{{ $errors->first('tahun_ajaran') }}</strong>
                                     </span>
                                 @endif
                             </div>
@@ -60,7 +60,7 @@
                                     Simpan
                                 </button>
 
-                                <a class="btn btn-link" href="/siswa">
+                                <a class="btn btn-link" href="/kelas">
                                     Kembali
                                 </a>
                             </div>

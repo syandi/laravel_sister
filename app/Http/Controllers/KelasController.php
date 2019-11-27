@@ -36,11 +36,11 @@ class KelasController extends Controller
     public function store(Request $request)
     {
         $kelas = new Kelas();
-        $kelas->id = $request->nikid;
-        $kelas->nama = $request->nama;
+        $kelas->id = $request->id;
+        $kelas->name = $request->name;
         $kelas->tahun_ajaran = $request->tahun_ajaran;
         
-        $siswa->save();
+        $kelas->save();
 
         return redirect('/kelas');
     }
@@ -62,7 +62,7 @@ class KelasController extends Controller
      * @param  \App\kelas  $kelas
      * @return \Illuminate\Http\Response
      */
-    public function edit(kelas $kelas)
+    public function edit($id)
     {
         $kelas = Kelas::find($id);
         return view('kelas.edit', ['kelas' => $kelas, 'id' => $id]);
@@ -75,10 +75,10 @@ class KelasController extends Controller
      * @param  \App\kelas  $kelas
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, kelas $kelas)
+    public function update(Request $request, $id)
     {
-        $kelas = Siswa::find($id);
-        $kelas->nama = $request->nama;
+        $kelas = Kelas::find($id);
+        $kelas->name = $request->name;
         $kelas->tahun_ajaran = $request->tahun_ajaran;
         
         $kelas->save();
@@ -92,11 +92,11 @@ class KelasController extends Controller
      * @param  \App\kelas  $kelas
      * @return \Illuminate\Http\Response
      */
-    public function destroy(kelas $kelas)
+    public function destroy($id)
     {
         $kelas = Kelas::find($id);
         $kelas->delete();
 
-        return redirect('/kelas')
+        return redirect('/kelas');
     }
 }
