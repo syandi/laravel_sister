@@ -6,21 +6,21 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">
-                    Data Siswa Baru
+                    Siswa Baru
                 </div>
                 <div class="card-body">
                     <form method="POST" action="/siswa">
                         @csrf
 
                         <div class="form-group row">
-                            <label for="nik" class="col-sm-4 col-form-label text-md-right">NIK</label>
+                            <label for="id" class="col-sm-4 col-form-label text-md-right">ID</label>
 
                             <div class="col-md-6">
-                                <input id="nik" class="form-control{{ $errors->has('nik') ? ' is-invalid' : '' }}" name="nik" value="{{ old('nik') }}" required autofocus>
+                                <input id="id" class="form-control{{ $errors->has('id') ? ' is-invalid' : '' }}" name="id" value="{{ old('id') }}" required autofocus>
 
-                                @if ($errors->has('nik'))
+                                @if ($errors->has('id'))
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('nik') }}</strong>
+                                        <strong>{{ $errors->first('id') }}</strong>
                                     </span>
                                 @endif
                             </div>
@@ -35,6 +35,20 @@
                                 @if ($errors->has('nama'))
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('nama') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="kelas" class="col-sm-4 col-form-label text-md-right">Kelas</label>
+
+                            <div class="col-md-6">
+                                <input id="kelas" class="form-control{{ $errors->has('kelas') ? ' is-invalid' : '' }}" name="kelas" value="{{ old('kelas') }}" required autofocus>
+
+                                @if ($errors->has('kelas'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('kelas') }}</strong>
                                     </span>
                                 @endif
                             </div>

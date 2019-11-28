@@ -16,7 +16,7 @@ class Kelas extends Migration
         Schema::create('kelas', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nama');
-            $table->date('tahun_ajaran');
+            $table->string('tahun_ajaran')->nullable();
             $table->timestamps();
         });
     }

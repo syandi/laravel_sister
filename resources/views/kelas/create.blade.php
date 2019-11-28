@@ -13,7 +13,7 @@
                         @csrf
 
                         <div class="form-group row">
-                            <label for="id" class="col-sm-4 col-form-label text-md-right">id</label>
+                            <label for="id" class="col-sm-4 col-form-label text-md-right">ID</label>
 
                             <div class="col-md-6">
                                 <input id="id" class="form-control{{ $errors->has('id') ? ' is-invalid' : '' }}" name="id" value="{{ old('id') }}" required autofocus>
@@ -27,14 +27,14 @@
                         </div>
                         
                         <div class="form-group row">
-                            <label for="name" class="col-sm-4 col-form-label text-md-right">Nama</label>
+                            <label for="nama" class="col-sm-4 col-form-label text-md-right">Nama</label>
 
                             <div class="col-md-6">
-                                <input id="name" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
+                                <input id="nama" class="form-control{{ $errors->has('nama') ? ' is-invalid' : '' }}" name="nama" value="{{ old('nama') }}" required autofocus>
 
-                                @if ($errors->has('name'))
+                                @if ($errors->has('nama'))
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('name') }}</strong>
+                                        <strong>{{ $errors->first('nama') }}</strong>
                                     </span>
                                 @endif
                             </div>

@@ -25,7 +25,7 @@
                     @foreach ($kelas as $s)
                         <tr>
                             <td scope="row">{{ $s->id }}</td>
-                            <td>{{ $s->name }}</td>
+                            <td>{{ $s->nama }}</td>
                             <td>{{ $s->tahun_ajaran }}</td>
                             <td>
                                 <a href="/kelas/{{$s->id}}/edit">Edit
@@ -39,40 +39,5 @@
             </div>
         </div>
     </div>
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">NIK</label>
-                        <input type="text" name="nik" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="nik">
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputPassword1">Nama</label>
-                        <input type="text" name="nama" class="form-control" id="exampleInputPassword1" placeholder="nama">
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputPassword1">Keterangan</label>
-                        <input type="text" name="keterangan" class="form-control" id="exampleInputPassword1" placeholder="keterangan">
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Keluar</button>
-                    <button type="submit" class="btn btn-primary">Simpan</button>
-
-                    </tbody>
-                    </thead>
-                </div>
-            </div>
-        </div>
-    </div>
-    </form>
 </div>
 @endsection

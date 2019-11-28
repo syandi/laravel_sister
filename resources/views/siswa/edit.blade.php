@@ -13,14 +13,14 @@
                         @csrf
 
                         <div class="form-group row">
-                            <label for="nik" class="col-sm-4 col-form-label text-md-right">NIK</label>
+                            <label for="id" class="col-sm-4 col-form-label text-md-right">ID</label>
 
                             <div class="col-md-6">
-                                <input id="nik" class="form-control{{ $errors->has('nik') ? ' is-invalid' : '' }}" name="nik" value="{{ $siswa->nik }}" required autofocus>
+                                <input id="id" class="form-control{{ $errors->has('id') ? ' is-invalid' : '' }}" name="id" value="{{ $siswa->id }}" required autofocus>
 
-                                @if ($errors->has('nik'))
+                                @if ($errors->has('id'))
                                     <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('nik') }}</strong>
+                                        <strong>{{ $errors->first('id') }}</strong>
                                     </span>
                                 @endif
                             </div>
@@ -41,10 +41,24 @@
                         </div>
 
                         <div class="form-group row">
+                            <label for="kelas" class="col-sm-4 col-form-label text-md-right">Kelas</label>
+
+                            <div class="col-md-6">
+                                <input id="kelas" class="form-control{{ $errors->has('kelas') ? ' is-invalid' : '' }}" name="kelas" value="{{ $siswa->kelas }}" required autofocus>
+
+                                @if ($errors->has('kelas'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('kelas') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div> 
+
+                        <div class="form-group row">
                             <label for="keterangan" class="col-sm-4 col-form-label text-md-right">Keterangan</label>
 
                             <div class="col-md-6">
-                                <input id="keterangan" class="form-control{{ $errors->has('nama') ? ' is-invalid' : '' }}" name="keterangan" value="{{ $siswa->keterangan }}" required autofocus>
+                                <input id="keterangan" class="form-control{{ $errors->has('keterangan') ? ' is-invalid' : '' }}" name="keterangan" value="{{ $siswa->keterangan }}" required autofocus>
 
                                 @if ($errors->has('keterangan'))
                                     <span class="invalid-feedback" role="alert">

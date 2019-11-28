@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 
 class KelasController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
     /**
      * Display a listing of the resource.
      *
@@ -37,7 +42,7 @@ class KelasController extends Controller
     {
         $kelas = new Kelas();
         $kelas->id = $request->id;
-        $kelas->name = $request->name;
+        $kelas->nama = $request->nama;
         $kelas->tahun_ajaran = $request->tahun_ajaran;
         
         $kelas->save();
@@ -78,7 +83,7 @@ class KelasController extends Controller
     public function update(Request $request, $id)
     {
         $kelas = Kelas::find($id);
-        $kelas->name = $request->name;
+        $kelas->nama = $request->nama;
         $kelas->tahun_ajaran = $request->tahun_ajaran;
         
         $kelas->save();
