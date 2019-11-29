@@ -18,6 +18,8 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet">
 </head>
 <body>
     <div id="app">
@@ -46,6 +48,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#">Tabungan</a>
                         </li>
+                        <select class="cari form-control" style="width:500px;" name="cari"></select>
                         @endauth
                     </ul>
 
@@ -72,6 +75,8 @@
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
+
+                                        
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -89,5 +94,30 @@
             @yield('content')
         </main>
     </div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+    <script s`rc="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+    <script type="text/javascript">
+    $('.cari').select2({
+        placeholder: 'Cari...',
+        ajax: {
+        url: '/cari',
+        dataType: 'json',
+        delay: 250,
+        processResults: function (data) {
+            return {
+            results:  $.map(data, function (item) {
+                return {
+                text: item.email,
+                id: item.id
+                }
+            })
+            };
+        },
+        cache: true
+        }
+    });
+
+    </script>`
 </body>
 </html>
