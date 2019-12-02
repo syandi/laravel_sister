@@ -24,13 +24,11 @@ class SiswaController extends Controller
     }
 
     public function search(Request $request){
-        $cari = $request->cari;
-
-        $siswa = DB::table('siswa')
-        ->where('nama','like',"%".$cari."%")
-        ->paginate();
-
-        return view('siswa.index', ['siswa' => $siswa]);
+        if($request->has('q')){
+            $cari = $request->q;
+            $data = DB::table('siswa')->select('id','nama','kelas')->where('nama','LIKE','%$cari%')->get();
+            return response()->json($data);
+        }
     }
 
     public function store(Request $request) {
